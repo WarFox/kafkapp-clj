@@ -1,0 +1,11 @@
+{:paths ["src"]
+ ;; :deps {kafkapp/core {:local/root "."}}
+ :tasks
+ {producer {:doc "Run producer with -c and -t arguments"
+            :task (clojure (clojure.string/join " " (flatten ["-M:run"
+                                                              "producer"
+                                                              *command-line-args*])))}
+  consumer {:doc  "Run consumer with -c and -t arguments"
+            :task (clojure (clojure.string/join " " (flatten ["-M:run"
+                                                              "consumer"
+                                                              *command-line-args*])))}}}

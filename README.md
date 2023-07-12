@@ -56,6 +56,13 @@ Run the consumer
  clj -M:run consumer -c transactional -t pageviews
 ```
 
+Run using `babashka`
+
+```sh
+bb producer -c avro -t pageviews
+bb consumer -c avro -t pageviews
+```
+
 ## Build
 
 Run the project's tests (they'll fail until you edit them):
